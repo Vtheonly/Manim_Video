@@ -11,7 +11,7 @@ COLOR_DIM_TEXT = "#8892B0"
 
 # Font configurations
 FONT_MONO      = "JetBrains Mono" # Fallback to standard monospace if missing
-FONT_SANS      = "Helvetica Neue" # Fallback to standard sans-serif if missing
+FONT_SANS      = "Inter" # Fallback to standard sans-serif if missing
 
 # ── SAFE ZONE CONSTANTS (FOR 720p RESOLUTION) ────────────────────
 FRAME_W = config.frame_width
