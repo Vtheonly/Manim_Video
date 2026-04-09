@@ -1,6 +1,5 @@
 from manim import *
-from core.config import *
-
+from core.config import *  # ✅ correct for your structure
 class BaseChapter(Scene):
     """
     The master scene class. All chapters inherit from this.

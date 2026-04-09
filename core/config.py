@@ -1,3 +1,5 @@
+# core/config.py
+
 from manim import *
 
 # ── STRICT VISUAL LANGUAGE (PALETTE) ─────────────────────────────
@@ -10,8 +12,8 @@ COLOR_TEXT     = "#FFFFFF"
 COLOR_DIM_TEXT = "#8892B0"
 
 # Font configurations
-FONT_MONO      = "JetBrains Mono" # Fallback to standard monospace if missing
-FONT_SANS      = "Inter" # Fallback to standard sans-serif if missing
+FONT_MONO = "Monospace"
+FONT_SANS = "Sans"
 
 # ── SAFE ZONE CONSTANTS (FOR 720p RESOLUTION) ────────────────────
 FRAME_W = config.frame_width
@@ -26,15 +28,15 @@ SAFE_BOTTOM = -FRAME_H/2 + SAFE_MARGIN
 # ── BOUNDARY MATHEMATICS ─────────────────────────────────────────
 def is_in_frame(mobject, margin=SAFE_MARGIN):
     """Check if mobject is fully within frame boundaries."""
-    left = mobject.get_left()[0]
-    right = mobject.get_right()[0]
-    top = mobject.get_top()[1]
+    left   = mobject.get_left()[0]
+    right  = mobject.get_right()[0]
+    top    = mobject.get_top()[1]
     bottom = mobject.get_bottom()[1]
 
     return (
-        left >= SAFE_LEFT and
-        right <= SAFE_RIGHT and
-        top <= SAFE_TOP and
+        left   >= SAFE_LEFT  and
+        right  <= SAFE_RIGHT and
+        top    <= SAFE_TOP   and
         bottom >= SAFE_BOTTOM
     )
 
